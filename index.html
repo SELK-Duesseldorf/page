@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Linktree</title>
+
+    <style>
+        html, body {
+            height: 100%; /*Höhe*/
+            background-color: antiquewhite;
+        }
+
+        #Gesamt {
+            min-height: 100%; /*Mindesthöhe 100%*/
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .Inhalt {
+            display: flex; /*Flexbox*/
+            flex-wrap: wrap; /*Flexiblen Elemente sollen umgebrochen werden.*/
+            flex-direction: row; /*Hauptachse verläuft von links nach rechts*/
+            justify-content: space-evenly;
+            align-items: center; /*Positioniert die Elemente mittig auf der Kreuzachse*/
+
+            max-width: 100%; /*Maximale Breite 100%*/
+            height: min-content; /*Mindestens so hoch wie der Inhalt des Containers.*/
+            padding: 15px; /*Innenabstand*/
+        }
+
+        .box {
+            float: left; /*Links positioniert*/
+            padding: 10px; /*Innenabstand*/
+            margin: 15px; /*Außenabstand*/
+            width: 150px;
+            height: auto;
+
+            background-color: brown; /*Hintergrundfarbe*/
+        }
+
+        .linkbox{
+            text-align: center; /*Textausrichtung: zentriert*/
+            text-decoration: none;
+        }
+
+        .linkbox a {
+            text-decoration: none;
+            color: white;
+        }
+
+        @media print {
+            .box {
+                size: portrait;
+                break-inside: avoid;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="Gesamt">
+
+        <div id="Kopf">
+            <h1>Erlösergemeinde Düsseldorf</h1>
+        </div>
+
+        <div class="Inhalt">
+            <div class="box">
+                <div class="linkbox">
+                    <p>
+                        <a href="https://www.selk-duesseldorf.de/">Homepage</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="linkbox">
+                    <p>
+                        <a href="https://www.selk-duesseldorf.de/Gemeindebriefe/Gemeindebrief_02_23.pdf">Gemeindebrief</a> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="linkbox">
+                    <p>
+                        <a href="https://www.selk-duesseldorf.de/predigt.php">Aktuelle Predikt</a> 
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="linkbox">
+                    <p>
+                        <a href="Gemeindetermine 2023 Düsseldorf.docx">Termine 2023</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="linkbox">
+                    <p>
+                        <a href="https://www.selk-duesseldorf.de/impressum.php">Impressum</a> 
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br>
+
+</div>
+
+</head>
+    
+</body>
+</html>
